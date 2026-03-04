@@ -1,10 +1,18 @@
 import { motion } from 'motion/react';
 import { Globe, Code } from 'lucide-react';
+import { SEO } from '../components/SEO';
 import { Footer } from '../components/Footer';
 
 export function Services() {
   return (
-    <div className="relative z-10 flex flex-col items-center max-w-5xl w-full px-4 pb-20">
+    <>
+      <SEO 
+        title="Services"
+        description="Web design and software development services. We create beautiful, conversion-focused websites and scalable software solutions with AI-assisted precision. From MVPs to enterprise platforms."
+        path="/services"
+        keywords="web design services, software development services, app development, website design, custom software, MVP development, enterprise software, React development, PWA development"
+      />
+      <div className="relative z-10 flex flex-col items-center max-w-5xl w-full px-4 pb-20">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -81,5 +89,6 @@ export function Services() {
 
       <Footer />
     </div>
+    </>
   );
 }

@@ -1,9 +1,17 @@
 import { motion } from 'motion/react';
+import { SEO } from '../components/SEO';
 import { Footer } from '../components/Footer';
 
 export function PrivacyPolicy() {
   return (
-    <div className="relative z-10 flex flex-col items-center max-w-4xl w-full px-4 pb-32 md:pb-20">
+    <>
+      <SEO 
+        title="Privacy Policy"
+        description="Future Scope Labs Privacy Policy. Learn how we collect, use, and protect your personal information when you use our web design and software development services."
+        path="/privacy-policy"
+        keywords="privacy policy, data protection, privacy, GDPR, user data"
+      />
+      <div className="relative z-10 flex flex-col items-center max-w-4xl w-full px-4 pb-32 md:pb-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -144,5 +152,6 @@ export function PrivacyPolicy() {
 
       <Footer />
     </div>
+    </>
   );
 }

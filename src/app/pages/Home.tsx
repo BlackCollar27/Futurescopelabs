@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { useTheme } from 'next-themes';
+import { SEO } from '../components/SEO';
 import logoLight from 'figma:asset/80d38ff6cf060e57b95afff5b0b5615786e44b78.png';
 import logoDark from 'figma:asset/2d59fb06e80a41b9c9b829d1b7b08db93633bb92.png';
 
@@ -7,7 +8,14 @@ export function Home() {
   const { theme } = useTheme();
 
   return (
-    <div className="relative z-10 flex flex-col items-center justify-center max-w-4xl w-full px-4 text-center">
+    <>
+      <SEO 
+        title="Future Scope Labs"
+        description="AI-accelerated web design and software development agency. We build digital products that move at the speed of AI without losing the human touch. Expert developers combining speed, precision, and reliability."
+        path="/"
+        keywords="web design, web development, software development, AI development, PWA, progressive web apps, design agency, React development, digital products, app development"
+      />
+      <div className="relative z-10 flex flex-col items-center justify-center max-w-4xl w-full px-4 text-center">
       {/* Logo - Desktop Only */}
       <motion.img
         src={theme === 'dark' ? logoLight : logoDark}
@@ -73,5 +81,6 @@ export function Home() {
         View Portfolio
       </motion.a>
     </div>
+    </>
   );
 }

@@ -1,7 +1,7 @@
 
-  # FutureScope
+  # FutureScopeLabs
 
-  This is a code bundle for FutureScope. The original project is available at https://www.figma.com/design/4CNRHTFK0AZgWwrYnpaguJ/FutureScope.
+  This is a code bundle for FutureScopeLabs. The original project is available at https://www.figma.com/design/4CNRHTFK0AZgWwrYnpaguJ/FutureScopeLabs.
 
   ## Running the code
 

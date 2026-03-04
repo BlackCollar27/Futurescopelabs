@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Zap, Lock, Users, ExternalLink } from 'lucide-react';
+import { SEO } from '../components/SEO';
 import { Footer } from '../components/Footer';
 
 export function About() {
@@ -31,7 +32,14 @@ export function About() {
   ];
 
   return (
-    <div className="relative z-10 flex flex-col items-center max-w-6xl w-full px-4 pb-20">
+    <>
+      <SEO 
+        title="Portfolio"
+        description="Explore our recent projects including FinTech dashboards, e-commerce platforms, and healthcare apps. We build fast, reliable, and beautiful digital products with AI-accelerated development."
+        path="/portfolio"
+        keywords="portfolio, web design portfolio, app development, FinTech development, e-commerce development, healthcare apps, React projects, software development showcase"
+      />
+      <div className="relative z-10 flex flex-col items-center max-w-6xl w-full px-4 pb-20">
       {/* Main Message - Manifesto Style */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -205,5 +213,6 @@ export function About() {
 
       <Footer />
     </div>
+    </>
   );
 }

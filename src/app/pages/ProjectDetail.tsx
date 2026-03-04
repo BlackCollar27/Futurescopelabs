@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { useParams, useNavigate } from 'react-router';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
+import { SEO } from '../components/SEO';
 import { Footer } from '../components/Footer';
 
 // Project data
@@ -107,7 +108,15 @@ export function ProjectDetail() {
   }
 
   return (
-    <div className="relative z-10 flex flex-col items-center max-w-6xl w-full px-4 pb-20">
+    <>
+      <SEO 
+        title={project.title}
+        description={project.fullDescription}
+        path={`/portfolio/${project.id}`}
+        type="article"
+        keywords={`${project.tags.join(', ')}, case study, project showcase, ${project.title}`}
+      />
+      <div className="relative z-10 flex flex-col items-center max-w-6xl w-full px-4 pb-20">
       {/* Back Button */}
       <motion.button
         initial={{ opacity: 0, x: -20 }}
@@ -288,5 +297,6 @@ export function ProjectDetail() {
 
       <Footer />
     </div>
+    </>
   );
 }

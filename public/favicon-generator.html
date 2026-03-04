@@ -1,0 +1,145 @@
+<!-- Favicon Generator Helper -->
+<!-- Open this file in a browser, it will display the logo at different sizes -->
+<!-- Take screenshots or use browser tools to save as PNG files -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Favicon Generator - Future Scope Labs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f5f5f5;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .favicon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .favicon-item {
+      text-align: center;
+      padding: 20px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+    }
+    .favicon-item h3 {
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #666;
+    }
+    .favicon-item canvas {
+      border: 1px solid #ccc;
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+    }
+    .instructions {
+      background: #fff3cd;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      border-left: 4px solid #ffc107;
+    }
+    .instructions h2 {
+      margin-top: 0;
+      color: #856404;
+    }
+    .instructions ol {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    .instructions li {
+      margin: 8px 0;
+      color: #856404;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Future Scope Labs Favicon Generator</h1>
+    
+    <div class="instructions">
+      <h2>📋 Instructions</h2>
+      <ol>
+        <li>Right-click on each favicon below</li>
+        <li>Select "Save Image As..." or use browser DevTools to download</li>
+        <li>Save with the exact filename shown (e.g., favicon-16x16.png)</li>
+        <li>Place all files in the <code>/public</code> folder of your project</li>
+      </ol>
+      <p><strong>Note:</strong> These are generated from your logo automatically scaled to each size.</p>
+    </div>
+
+    <div class="favicon-grid">
+      <div class="favicon-item">
+        <h3>favicon-16x16.png</h3>
+        <canvas id="favicon16" width="16" height="16"></canvas>
+      </div>
+      
+      <div class="favicon-item">
+        <h3>favicon-32x32.png</h3>
+        <canvas id="favicon32" width="32" height="32"></canvas>
+      </div>
+      
+      <div class="favicon-item">
+        <h3>apple-touch-icon.png<br>(180x180)</h3>
+        <canvas id="favicon180" width="180" height="180"></canvas>
+      </div>
+      
+      <div class="favicon-item">
+        <h3>icon-192x192.png<br>(PWA)</h3>
+        <canvas id="favicon192" width="192" height="192"></canvas>
+      </div>
+      
+      <div class="favicon-item">
+        <h3>icon-512x512.png<br>(PWA)</h3>
+        <canvas id="favicon512" width="512" height="512"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    // Import the favicon image
+    import favicon from 'figma:asset/4fcf02ef9d5245c6db0fd72ee435b23120190090.png';
+    
+    // Create an image element
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.src = favicon;
+    
+    img.onload = function() {
+      // Generate each size
+      generateFavicon('favicon16', 16);
+      generateFavicon('favicon32', 32);
+      generateFavicon('favicon180', 180);
+      generateFavicon('favicon192', 192);
+      generateFavicon('favicon512', 512);
+    };
+    
+    function generateFavicon(canvasId, size) {
+      const canvas = document.getElementById(canvasId);
+      const ctx = canvas.getContext('2d');
+      
+      // Fill with white background
+      ctx.fillStyle = 'white';
+      ctx.fillRect(0, 0, size, size);
+      
+      // Draw the image scaled to the canvas size
+      ctx.drawImage(img, 0, 0, size, size);
+    }
+  </script>
+</body>
+</html>

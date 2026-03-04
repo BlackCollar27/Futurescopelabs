@@ -1,9 +1,17 @@
 import { motion } from 'motion/react';
+import { SEO } from '../components/SEO';
 import { Footer } from '../components/Footer';
 
 export function TermsOfService() {
   return (
-    <div className="relative z-10 flex flex-col items-center max-w-4xl w-full px-4 pb-32 md:pb-20">
+    <>
+      <SEO 
+        title="Terms of Service"
+        description="Future Scope Labs Terms of Service. Read our terms and conditions for using our web design and software development services."
+        path="/terms-of-service"
+        keywords="terms of service, terms and conditions, legal terms, service agreement"
+      />
+      <div className="relative z-10 flex flex-col items-center max-w-4xl w-full px-4 pb-32 md:pb-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -111,5 +119,6 @@ export function TermsOfService() {
 
       <Footer />
     </div>
+    </>
   );
 }

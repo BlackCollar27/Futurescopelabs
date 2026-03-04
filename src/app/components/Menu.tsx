@@ -36,7 +36,7 @@ export function Menu({ onClose }: MenuProps) {
           damping: 30, 
           stiffness: 300 
         }}
-        className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-black/95 backdrop-blur-2xl rounded-t-3xl shadow-2xl overflow-hidden border-t-2 border-[#CEC3C1]"
+        className="fixed bottom-0 left-0 right-0 z-50 bg-white/70 dark:bg-black/70 backdrop-blur-2xl rounded-t-3xl shadow-2xl overflow-hidden border-t-2 border-[#CEC3C1]"
         style={{ maxHeight: '85vh' }}
       >
         {/* Close Button */}

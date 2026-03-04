@@ -7,6 +7,7 @@ import { BookCall } from "./pages/BookCall";
 import { TermsOfService } from "./pages/TermsOfService";
 import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 import { ProjectDetail } from "./pages/ProjectDetail";
+import { NotFound } from "./pages/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -18,8 +19,13 @@ export const router = createBrowserRouter([
       { path: "portfolio/:projectId", Component: ProjectDetail },
       { path: "services", Component: Services },
       { path: "book-call", Component: BookCall },
+      { path: "terms-of-service", Component: TermsOfService },
+      { path: "privacy-policy", Component: PrivacyPolicy },
+      // Legacy routes redirect
       { path: "terms", Component: TermsOfService },
       { path: "privacy", Component: PrivacyPolicy },
+      // 404 Catch-all route
+      { path: "*", Component: NotFound },
     ],
   },
 ]);

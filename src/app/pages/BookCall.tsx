@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { useEffect } from 'react';
 import { Calendar, Clock, MessageSquare } from 'lucide-react';
+import { SEO } from '../components/SEO';
 import { Footer } from '../components/Footer';
 
 export function BookCall() {
@@ -19,7 +20,14 @@ export function BookCall() {
   }, []);
 
   return (
-    <div className="relative z-10 flex flex-col items-center justify-start w-full text-center">
+    <>
+      <SEO 
+        title="Book a Call"
+        description="Schedule a free 30-minute discovery call with Future Scope Labs. Let's discuss your project goals and how we can help bring your digital product to life with AI-accelerated development."
+        path="/book-call"
+        keywords="book consultation, free consultation, discovery call, project consultation, web development consultation, software development meeting, schedule call"
+      />
+      <div className="relative z-10 flex flex-col items-center justify-start w-full text-center">
       {/* Headline Section */}
       <div className="px-4 pt-4 md:pt-8 mb-8">
         <motion.h1 
@@ -135,5 +143,6 @@ export function BookCall() {
 
       <Footer />
     </div>
+    </>
   );
 }
