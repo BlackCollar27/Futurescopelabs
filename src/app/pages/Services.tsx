@@ -2,8 +2,11 @@ import { motion } from 'motion/react';
 import { Globe, Code } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { Footer } from '../components/Footer';
+import { useNavigate } from 'react-router';
 
 export function Services() {
+  const navigate = useNavigate();
+
   return (
     <>
       <SEO 
@@ -45,7 +48,7 @@ export function Services() {
         className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full"
       >
         {/* Web Design */}
-        <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm border-2 border-[#CEC3C1] rounded-2xl p-10 hover:border-[#C02130] hover:shadow-xl hover:shadow-[#C02130]/10 transition-all duration-300 group">
+        <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-lg shadow-[#CEC3C1]/30 rounded-2xl p-10 hover:shadow-xl hover:shadow-[#C02130]/20 transition-all duration-300 group">
           <div className="flex justify-center mb-8">
             <div className="w-20 h-20 rounded-full border-2 border-[#CEC3C1] flex items-center justify-center group-hover:bg-[#C02130]/30 transition-all duration-300 bg-[#ffffff33]">
               <Globe className="w-10 h-10 text-[#C02130]" />
@@ -66,7 +69,7 @@ export function Services() {
         </div>
 
         {/* Software Development */}
-        <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm border-2 border-[#CEC3C1] rounded-2xl p-10 hover:border-[#C02130] hover:shadow-xl hover:shadow-[#C02130]/10 transition-all duration-300 group">
+        <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-lg shadow-[#CEC3C1]/30 rounded-2xl p-10 hover:shadow-xl hover:shadow-[#C02130]/20 transition-all duration-300 group">
           <div className="flex justify-center mb-8">
             <div className="w-20 h-20 rounded-full border-2 border-[#CEC3C1] flex items-center justify-center group-hover:bg-[#C02130]/30 transition-all duration-300 bg-[#ffffff33]">
               <Code className="w-10 h-10 text-[#C02130]" />
@@ -85,6 +88,24 @@ export function Services() {
             Scalable, reliable software engineered with AI-assisted precision. From MVPs to enterprise platforms, we build it right.
           </p>
         </div>
+      </motion.div>
+
+      {/* Book a Call CTA */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="mt-16 text-center"
+      >
+        <motion.button
+          onClick={() => navigate('/book-call')}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-[#C02130] text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-[#a01b28] transition-colors shadow-lg shadow-[#C02130]/20"
+          style={{ fontFamily: 'Montserrat, sans-serif' }}
+        >
+          Book a Call
+        </motion.button>
       </motion.div>
 
       <Footer />

@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { X } from 'lucide-react';
+import { X, LogIn } from 'lucide-react';
 import { Link } from 'react-router';
 
 interface MenuProps {
@@ -36,8 +36,11 @@ export function Menu({ onClose }: MenuProps) {
           damping: 30, 
           stiffness: 300 
         }}
-        className="fixed bottom-0 left-0 right-0 z-50 bg-white/70 dark:bg-black/70 backdrop-blur-2xl rounded-t-3xl shadow-2xl overflow-hidden border-t-2 border-[#CEC3C1]"
-        style={{ maxHeight: '85vh' }}
+        className="fixed bottom-0 left-0 right-0 z-50 bg-white/70 dark:bg-black/60 backdrop-blur-2xl rounded-t-3xl overflow-hidden"
+        style={{ 
+          maxHeight: '85vh',
+          boxShadow: '0 -4px 20px rgba(206, 195, 193, 0.3)'
+        }}
       >
         {/* Close Button */}
         <div className="absolute top-4 right-4 z-10">
@@ -70,6 +73,23 @@ export function Menu({ onClose }: MenuProps) {
                 </Link>
               </motion.div>
             ))}
+            
+            {/* Login Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: menuItems.length * 0.1 }}
+              className="pt-4"
+            >
+              <button
+                onClick={onClose}
+                className="w-full px-6 py-4 bg-[#C02130] text-white text-xl rounded-full hover:bg-[#a01b28] transition-all duration-300 flex items-center justify-center gap-3 shadow-lg shadow-[#C02130]/20"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                <LogIn size={22} />
+                Login
+              </button>
+            </motion.div>
           </nav>
         </div>
       </motion.div>

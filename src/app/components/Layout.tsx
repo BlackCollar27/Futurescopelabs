@@ -5,8 +5,8 @@ import { ChevronUp } from 'lucide-react';
 import { Menu } from './Menu';
 import { ThemeToggle } from './ThemeToggle';
 import { useTheme } from 'next-themes';
-import logoLight from 'figma:asset/80d38ff6cf060e57b95afff5b0b5615786e44b78.png';
-import logoDark from 'figma:asset/2d59fb06e80a41b9c9b829d1b7b08db93633bb92.png';
+import logoDark from 'figma:asset/4026f41fd051d077eb1d5a8c60e5c3cd4e1c620f.png';
+import logoLight from 'figma:asset/c88db6c10b54909dc2d55b3172f51d9dfe3d765e.png';
 
 export function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,19 +38,15 @@ export function Layout() {
       {/* Geometric Background Pattern */}
       <div className="absolute inset-0">
         {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-white dark:from-black dark:via-gray-900 dark:to-black transition-colors duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-white dark:from-black dark:via-black dark:to-black transition-colors duration-300" />
         
         {/* Geometric grid overlay */}
         <svg className="absolute inset-0 w-full h-full opacity-20 dark:opacity-30" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
-              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#CEC3C1" strokeWidth="0.5"/>
-            </pattern>
             <pattern id="hexagons" width="100" height="87" patternUnits="userSpaceOnUse">
               <path d="M50 0 L93.3 25 L93.3 62 L50 87 L6.7 62 L6.7 25 Z" fill="none" stroke="#CEC3C1" strokeWidth="0.5" opacity="0.3"/>
             </pattern>
           </defs>
-          <rect width="100%" height="100%" fill="url(#grid)" />
           <rect width="100%" height="100%" fill="url(#hexagons)" />
         </svg>
         
@@ -84,7 +80,7 @@ export function Layout() {
               <img 
                 src={theme === 'dark' ? logoLight : logoDark} 
                 alt="Future Scope Labs" 
-                className="h-16 w-auto" 
+                className="h-20 w-auto" 
               />
             </a>
             <nav className="flex items-center gap-10 text-black/70 dark:text-white/70" style={{ fontFamily: 'Montserrat, sans-serif' }}>
@@ -122,7 +118,7 @@ export function Layout() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.6 }}
         onClick={() => setIsMenuOpen(true)}
-        className="md:hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-10 w-16 h-16 rounded-full bg-white/20 dark:bg-[#C02130]/20 backdrop-blur-md border-2 border-[#CEC3C1] flex items-center justify-center text-[#C02130] dark:text-[#C02130] hover:bg-[#C02130]/10 hover:scale-110 transition-all duration-200 shadow-xl shadow-[#C02130]/10 bg-[#ffffff33]"
+        className="md:hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-10 w-16 h-16 rounded-full bg-white/20 dark:bg-white/20 backdrop-blur-md border-2 border-[#CEC3C1] flex items-center justify-center text-[#C02130] dark:text-[#C02130] hover:bg-white/10 hover:scale-110 transition-all duration-200 shadow-xl shadow-[#C02130]/10 bg-[#ffffff1a]"
       >
         <ChevronUp size={22} strokeWidth={2.5} />
       </motion.button>

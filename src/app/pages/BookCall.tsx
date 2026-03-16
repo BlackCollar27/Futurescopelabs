@@ -86,7 +86,7 @@ export function BookCall() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1 */}
-          <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm border-2 border-[#CEC3C1] rounded-2xl p-6 hover:border-[#C02130] transition-all duration-300">
+          <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-lg shadow-[#CEC3C1]/30 rounded-2xl p-6 hover:shadow-xl hover:shadow-[#C02130]/20 transition-all duration-300">
             <Calendar className="w-10 h-10 text-[#C02130] mb-4 mx-auto" />
             <h3 
               className="text-black dark:text-white font-semibold mb-2 text-lg"
@@ -103,7 +103,7 @@ export function BookCall() {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm border-2 border-[#CEC3C1] rounded-2xl p-6 hover:border-[#C02130] transition-all duration-300">
+          <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-lg shadow-[#CEC3C1]/30 rounded-2xl p-6 hover:shadow-xl hover:shadow-[#C02130]/20 transition-all duration-300">
             <MessageSquare className="w-10 h-10 text-[#C02130] mb-4 mx-auto" />
             <h3 
               className="text-black dark:text-white font-semibold mb-2 text-lg"
@@ -120,7 +120,7 @@ export function BookCall() {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm border-2 border-[#CEC3C1] rounded-2xl p-6 hover:border-[#C02130] transition-all duration-300">
+          <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-lg shadow-[#CEC3C1]/30 rounded-2xl p-6 hover:shadow-xl hover:shadow-[#C02130]/20 transition-all duration-300">
             <Clock className="w-10 h-10 text-[#C02130] mb-4 mx-auto" />
             <h3 
               className="text-black dark:text-white font-semibold mb-2 text-lg"

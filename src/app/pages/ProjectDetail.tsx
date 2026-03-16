@@ -272,7 +272,7 @@ export function ProjectDetail() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.8 }}
-        className="w-full bg-white/50 dark:bg-white/5 backdrop-blur-sm border-2 border-[#CEC3C1] rounded-2xl p-12 text-center mb-12"
+        className="w-full bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-lg shadow-[#CEC3C1]/30 rounded-2xl p-12 text-center mb-12"
       >
         <h2 
           className="text-black dark:text-white text-3xl mb-4 font-semibold"

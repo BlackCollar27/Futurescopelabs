@@ -1,8 +1,8 @@
 import { motion } from 'motion/react';
 import { useTheme } from 'next-themes';
 import { SEO } from '../components/SEO';
-import logoLight from 'figma:asset/80d38ff6cf060e57b95afff5b0b5615786e44b78.png';
-import logoDark from 'figma:asset/2d59fb06e80a41b9c9b829d1b7b08db93633bb92.png';
+import logoLight from 'figma:asset/c88db6c10b54909dc2d55b3172f51d9dfe3d765e.png';
+import logoDark from 'figma:asset/4026f41fd051d077eb1d5a8c60e5c3cd4e1c620f.png';
 
 export function Home() {
   const { theme } = useTheme();
@@ -57,7 +57,9 @@ export function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.6 }}
-        className="px-12 py-4 bg-[#C02130] hover:bg-[#C02130]/90 text-white rounded-full font-medium hover:scale-105 transition-all duration-200 shadow-2xl shadow-[#C02130]/20 border-2 border-[#CEC3C1]"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="px-12 py-4 bg-[#C02130] hover:bg-[#a01b28] text-white rounded-full font-medium transition-colors shadow-lg shadow-[#C02130]/20"
         style={{ 
           fontFamily: 'Montserrat, sans-serif',
           fontSize: '1.125rem'
@@ -72,10 +74,17 @@ export function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.7 }}
-        className="mt-4 px-12 py-4 bg-transparent hover:bg-[#CEC3C1]/20 text-black dark:text-white rounded-full font-medium hover:scale-105 transition-all duration-200 border-2 border-[#CEC3C1]"
+        className="mt-4 px-12 py-4 bg-white/5 dark:bg-white/3 hover:bg-[#CEC3C1]/15 text-black dark:text-white rounded-full font-medium hover:scale-105 transition-all duration-200 backdrop-blur-md"
         style={{ 
           fontFamily: 'Montserrat, sans-serif',
-          fontSize: '1.125rem'
+          fontSize: '1.125rem',
+          boxShadow: '0 0 12px rgba(206, 195, 193, 0.4), 0 0 25px rgba(206, 195, 193, 0.2)'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.boxShadow = '0 0 18px rgba(206, 195, 193, 0.6), 0 0 35px rgba(206, 195, 193, 0.3)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.boxShadow = '0 0 12px rgba(206, 195, 193, 0.4), 0 0 25px rgba(206, 195, 193, 0.2)';
         }}
       >
         View Portfolio

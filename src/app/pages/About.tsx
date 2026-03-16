@@ -86,7 +86,7 @@ export function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="bg-white/50 dark:bg-white/5 backdrop-blur-sm border-2 border-[#CEC3C1] rounded-2xl overflow-hidden hover:border-[#C02130] hover:shadow-xl hover:shadow-[#C02130]/10 transition-all duration-300 group cursor-pointer block"
+              className="bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-lg shadow-[#CEC3C1]/30 rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-[#C02130]/20 transition-all duration-300 group cursor-pointer block"
             >
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
@@ -148,7 +148,7 @@ export function About() {
         className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full"
       >
         {/* Speed */}
-        <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm border-2 border-[#CEC3C1] rounded-2xl p-8 hover:border-[#C02130] hover:shadow-xl hover:shadow-[#C02130]/10 transition-all duration-300">
+        <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-lg shadow-[#CEC3C1]/30 rounded-2xl p-8 hover:shadow-xl hover:shadow-[#C02130]/20 transition-all duration-300">
           <div className="flex justify-center mb-6">
             <div className="w-16 h-16 rounded-full border-2 border-[#CEC3C1] flex items-center justify-center bg-[#ffffff]">
               <Zap className="w-8 h-8 text-[#C02130]" />
@@ -169,7 +169,7 @@ export function About() {
         </div>
 
         {/* Reliability */}
-        <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm border-2 border-[#CEC3C1] rounded-2xl p-8 hover:border-[#C02130] hover:shadow-xl hover:shadow-[#C02130]/10 transition-all duration-300">
+        <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-lg shadow-[#CEC3C1]/30 rounded-2xl p-8 hover:shadow-xl hover:shadow-[#C02130]/20 transition-all duration-300">
           <div className="flex justify-center mb-6">
             <div className="w-16 h-16 rounded-full border-2 border-[#CEC3C1] flex items-center justify-center bg-[#ffffff33]">
               <Lock className="w-8 h-8 text-[#C02130]" />
@@ -190,7 +190,7 @@ export function About() {
         </div>
 
         {/* Human */}
-        <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm border-2 border-[#CEC3C1] rounded-2xl p-8 hover:border-[#C02130] hover:shadow-xl hover:shadow-[#C02130]/10 transition-all duration-300">
+        <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-lg shadow-[#CEC3C1]/30 rounded-2xl p-8 hover:shadow-xl hover:shadow-[#C02130]/20 transition-all duration-300">
           <div className="flex justify-center mb-6">
             <div className="w-16 h-16 rounded-full border-2 border-[#CEC3C1] flex items-center justify-center bg-[#ffffff33]">
               <Users className="w-8 h-8 text-[#C02130]" />

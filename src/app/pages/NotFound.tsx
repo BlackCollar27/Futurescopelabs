@@ -91,7 +91,7 @@ export function NotFound() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <a
               href="/services"
-              className="p-6 bg-white/50 dark:bg-white/5 backdrop-blur-sm border-2 border-[#CEC3C1] rounded-2xl hover:border-[#C02130] transition-all duration-300 text-left"
+              className="p-6 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-lg shadow-[#CEC3C1]/30 rounded-2xl hover:shadow-xl hover:shadow-[#C02130]/20 transition-all duration-300 text-left"
             >
               <h4 
                 className="font-semibold text-black dark:text-white mb-2"
@@ -109,7 +109,7 @@ export function NotFound() {
 
             <a
               href="/portfolio"
-              className="p-6 bg-white/50 dark:bg-white/5 backdrop-blur-sm border-2 border-[#CEC3C1] rounded-2xl hover:border-[#C02130] transition-all duration-300 text-left"
+              className="p-6 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-lg shadow-[#CEC3C1]/30 rounded-2xl hover:shadow-xl hover:shadow-[#C02130]/20 transition-all duration-300 text-left"
             >
               <h4 
                 className="font-semibold text-black dark:text-white mb-2"
