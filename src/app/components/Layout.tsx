@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Outlet, useLocation } from 'react-router';
+import { Outlet, useLocation, Link } from 'react-router';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronUp } from 'lucide-react';
 import { Menu } from './Menu';
@@ -66,28 +66,28 @@ export function Layout() {
           <div className="hidden md:flex justify-between items-center max-w-7xl mx-auto">
             <div className="w-10" /> {/* Spacer for balance */}
             <nav className="flex items-center gap-10 text-black/70 dark:text-white/70" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-              <a href="/" className="hover:text-[#C02130] transition-colors tracking-wide">Home</a>
-              <a href="/portfolio" className="hover:text-[#C02130] transition-colors tracking-wide">Portfolio</a>
-              <a href="/services" className="hover:text-[#C02130] transition-colors tracking-wide">Services</a>
-              <a href="/book-call" className="hover:text-[#C02130] transition-colors tracking-wide">Book a Call</a>
+              <Link to="/" className="hover:text-[#C02130] transition-colors tracking-wide">Home</Link>
+              <Link to="/portfolio" className="hover:text-[#C02130] transition-colors tracking-wide">Portfolio</Link>
+              <Link to="/services" className="hover:text-[#C02130] transition-colors tracking-wide">Services</Link>
+              <Link to="/book-call" className="hover:text-[#C02130] transition-colors tracking-wide">Book a Call</Link>
             </nav>
             <ThemeToggle />
           </div>
         ) : (
           /* Desktop Layout - Inner Pages: Logo left, Nav right */
           <div className="hidden md:flex items-center justify-between max-w-7xl mx-auto">
-            <a href="/">
+            <Link to="/">
               <img 
                 src={theme === 'dark' ? logoLight : logoDark} 
                 alt="Future Scope Labs" 
                 className="h-20 w-auto" 
               />
-            </a>
+            </Link>
             <nav className="flex items-center gap-10 text-black/70 dark:text-white/70" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-              <a href="/" className="hover:text-[#C02130] transition-colors tracking-wide">Home</a>
-              <a href="/portfolio" className="hover:text-[#C02130] transition-colors tracking-wide">Portfolio</a>
-              <a href="/services" className="hover:text-[#C02130] transition-colors tracking-wide">Services</a>
-              <a href="/book-call" className="hover:text-[#C02130] transition-colors tracking-wide">Book a Call</a>
+              <Link to="/" className="hover:text-[#C02130] transition-colors tracking-wide">Home</Link>
+              <Link to="/portfolio" className="hover:text-[#C02130] transition-colors tracking-wide">Portfolio</Link>
+              <Link to="/services" className="hover:text-[#C02130] transition-colors tracking-wide">Services</Link>
+              <Link to="/book-call" className="hover:text-[#C02130] transition-colors tracking-wide">Book a Call</Link>
             </nav>
             <ThemeToggle />
           </div>
@@ -96,13 +96,13 @@ export function Layout() {
         {/* Mobile Layout - Centered Logo with Theme Toggle */}
         <div className="md:hidden flex justify-between items-center">
           <div className="w-10" /> {/* Spacer for balance */}
-          <a href="/">
+          <Link to="/">
             <img 
               src={theme === 'dark' ? logoLight : logoDark} 
               alt="Future Scope Labs" 
               className="h-20 w-auto" 
             />
-          </a>
+          </Link>
           <ThemeToggle />
         </div>
       </header>
